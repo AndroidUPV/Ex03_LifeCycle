@@ -12,7 +12,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
 // It is a good practice to create constants for your tags
-const val TAG = "LifeCycle"
+private const val TAG = "LifeCycle"
 
 /**
  * Displays information in LogCat about the activity's lifecycle.
