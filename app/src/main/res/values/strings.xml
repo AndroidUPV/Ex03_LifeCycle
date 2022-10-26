@@ -1,0 +1,12 @@
+<!--
+  ~ Copyright (c) 2022
+  ~ David de Andrés and Juan Carlos Ruiz
+  ~ Development of apps for mobile devices
+  ~ Universitat Politècnica de València
+  -->
+
+<resources>
+    <string name="app_name">Ex03_LifeCycle</string>
+    <!-- Strings to display in the layout -->
+    <string name="message">Check Logcat for LifeCycle messages</string>
+</resources>
