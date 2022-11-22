@@ -1,4 +1,4 @@
-- #Ex03_LifeCycle
+# Ex03_LifeCycle
 Lecture 01 - Basics of Android Development:  
 Displays a simple message.  
 The user should rotate the phone and launch other apps to force the activity to change between different states.  
