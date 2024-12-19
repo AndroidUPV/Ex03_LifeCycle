@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (c) 2022-2024 Universitat Politècnica de València
   ~ Authors: David de Andrés and Juan Carlos Ruiz
@@ -10,7 +11,5 @@
   -->
 
 <resources>
-    <string name="app_name">Ex03_LifeCycle</string>
-    <!-- Strings to display in the layout -->
-    <string name="message">Check Logcat for LifeCycle messages</string>
+    <dimen name="main_side_margins">16dp</dimen>
 </resources>

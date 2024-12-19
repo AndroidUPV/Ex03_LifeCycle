@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2023 Universitat Politècnica de València
+ * Copyright (c) 2022-2024 Universitat Politècnica de València
  * Authors: David de Andrés and Juan Carlos Ruiz
  *          Fault-Tolerant Systems
  *          Instituto ITACA
@@ -13,7 +13,12 @@ package upv.dadm.ex03_lifecycle
 
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
+import android.util.TypedValue.COMPLEX_UNIT_DIP
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 // It is a good practice to create constants for your tags
 private const val TAG = "Ex03LifeCycle"
@@ -25,8 +30,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
+        // Get side margins in pixels
+        val sideMarginPx = TypedValue.applyDimension(
+            COMPLEX_UNIT_DIP, R.dimen.main_side_margins + 0.5f, resources.displayMetrics
+        ).toInt()
+        // Prevent the layout from overlapping with system bars in edge-to-edge display
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(sideMarginPx, systemBars.top, sideMarginPx, systemBars.bottom)
+            insets
+        }
         // Log information will be sent to output (check LogCat)
         Log.d(TAG, "Activity created")
     }
