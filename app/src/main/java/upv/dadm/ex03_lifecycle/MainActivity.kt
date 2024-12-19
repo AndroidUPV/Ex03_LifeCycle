@@ -33,9 +33,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         // Get side margins in pixels
-        val sideMarginPx = TypedValue.applyDimension(
-            COMPLEX_UNIT_DIP, R.dimen.main_side_margins + 0.5f, resources.displayMetrics
-        ).toInt()
+        val sideMarginPx = resources.getDimensionPixelSize(R.dimen.main_side_margins)
         // Prevent the layout from overlapping with system bars in edge-to-edge display
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
