@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2024 Universitat Politècnica de València
+ * Copyright (c) 2022-2026 Universitat Politècnica de València
  * Authors: David de Andrés and Juan Carlos Ruiz
  *          Fault-Tolerant Systems
  *          Instituto ITACA
@@ -13,8 +13,6 @@ package upv.dadm.ex03_lifecycle
 
 import android.os.Bundle
 import android.util.Log
-import android.util.TypedValue
-import android.util.TypedValue.COMPLEX_UNIT_DIP
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
